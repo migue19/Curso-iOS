@@ -106,11 +106,14 @@ let filter = users.filter({$0.edad > 18})
 for item in filter {
     print(item.name)
 }
-let edades = users.map({$0.edad})
+var edades = users.map({$0.edad})
 
 for edad in edades {
     print(edad)
 }
+
+let order = edades.sort(by: <)
+print(order)
 
 //let sumAge = edades.reduce(0, { x, y in
 //    x + y
