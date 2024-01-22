@@ -37,6 +37,24 @@ class ViewController: UIViewController {
         let managedObject = getManagedObject()
         managedObject.setValue(idBook, forKey: Constants.idBook)
         managedObject.setValue(nameBook, forKey: Constants.nameBook)
+        saveContext()
+        showAlert(title: "Exito", message: "Se agrego un libro")
+    }
+    /// Delete
+    func deleteAll() {
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: Constants.dbName)
+        request.returnsObjectsAsFaults = false
+        do {
+            let result = try context.fetch(request)
+            for data in result as! [NSManagedObject] {
+                context.delete(data)
+            }
+            saveContext()
+        } catch {
+            print("Error al obtener los datos")
+        }
+    }
+    func saveContext() {
         do {
             try context.save()
         } catch {
@@ -77,6 +95,9 @@ class ViewController: UIViewController {
         let listBooks = ListBooksViewController()
         self.navigationController?.pushViewController(listBooks, animated: true)
         //fetchData()
+    }
+    @IBAction func tapDeleteAll(_ sender: Any) {
+        deleteAll()
     }
 }
 

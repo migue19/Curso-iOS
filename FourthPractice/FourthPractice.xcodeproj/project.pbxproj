@@ -18,6 +18,9 @@
 		F2B46C462B573A9200F29E14 /* ListBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B46C442B573A9200F29E14 /* ListBooksViewController.swift */; };
 		F2B46C472B573A9200F29E14 /* ListBooksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B46C452B573A9200F29E14 /* ListBooksViewController.xib */; };
 		F2B46C492B573CE300F29E14 /* BooksEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B46C482B573CE300F29E14 /* BooksEntity.swift */; };
+		F2D79B132B58805000FC9FE4 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D79B122B58805000FC9FE4 /* Utils.swift */; };
+		F2D79B172B58841100FC9FE4 /* UpdateBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D79B152B58841100FC9FE4 /* UpdateBookViewController.swift */; };
+		F2D79B182B58841100FC9FE4 /* UpdateBookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2D79B162B58841100FC9FE4 /* UpdateBookViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		F2B46C442B573A9200F29E14 /* ListBooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBooksViewController.swift; sourceTree = "<group>"; };
 		F2B46C452B573A9200F29E14 /* ListBooksViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListBooksViewController.xib; sourceTree = "<group>"; };
 		F2B46C482B573CE300F29E14 /* BooksEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksEntity.swift; sourceTree = "<group>"; };
+		F2D79B122B58805000FC9FE4 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		F2D79B152B58841100FC9FE4 /* UpdateBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateBookViewController.swift; sourceTree = "<group>"; };
+		F2D79B162B58841100FC9FE4 /* UpdateBookViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateBookViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,8 +75,10 @@
 				F2B46C072B57278C00F29E14 /* AppDelegate.swift */,
 				F2B46C092B57278C00F29E14 /* SceneDelegate.swift */,
 				F2B46C412B57317700F29E14 /* Constants.swift */,
-				F2B46C0B2B57278C00F29E14 /* ViewController.swift */,
+				F2D79B122B58805000FC9FE4 /* Utils.swift */,
 				F2B46C482B573CE300F29E14 /* BooksEntity.swift */,
+				F2D79B192B58856B00FC9FE4 /* CreateBook */,
+				F2D79B142B5883ED00FC9FE4 /* UpdateBook */,
 				F2B46C432B573A7700F29E14 /* ListBooks */,
 				F2B46C0D2B57278C00F29E14 /* Main.storyboard */,
 				F2B46C1B2B57286300F29E14 /* CourseiOS.xcdatamodeld */,
@@ -88,6 +96,23 @@
 				F2B46C452B573A9200F29E14 /* ListBooksViewController.xib */,
 			);
 			path = ListBooks;
+			sourceTree = "<group>";
+		};
+		F2D79B142B5883ED00FC9FE4 /* UpdateBook */ = {
+			isa = PBXGroup;
+			children = (
+				F2D79B152B58841100FC9FE4 /* UpdateBookViewController.swift */,
+				F2D79B162B58841100FC9FE4 /* UpdateBookViewController.xib */,
+			);
+			path = UpdateBook;
+			sourceTree = "<group>";
+		};
+		F2D79B192B58856B00FC9FE4 /* CreateBook */ = {
+			isa = PBXGroup;
+			children = (
+				F2B46C0B2B57278C00F29E14 /* ViewController.swift */,
+			);
+			path = CreateBook;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +177,7 @@
 				F2B46C472B573A9200F29E14 /* ListBooksViewController.xib in Resources */,
 				F2B46C112B57278D00F29E14 /* Assets.xcassets in Resources */,
 				F2B46C0F2B57278C00F29E14 /* Main.storyboard in Resources */,
+				F2D79B182B58841100FC9FE4 /* UpdateBookViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,9 +192,11 @@
 				F2B46C0C2B57278C00F29E14 /* ViewController.swift in Sources */,
 				F2B46C082B57278C00F29E14 /* AppDelegate.swift in Sources */,
 				F2B46C462B573A9200F29E14 /* ListBooksViewController.swift in Sources */,
+				F2D79B172B58841100FC9FE4 /* UpdateBookViewController.swift in Sources */,
 				F2B46C1D2B57286300F29E14 /* CourseiOS.xcdatamodeld in Sources */,
 				F2B46C0A2B57278C00F29E14 /* SceneDelegate.swift in Sources */,
 				F2B46C492B573CE300F29E14 /* BooksEntity.swift in Sources */,
+				F2D79B132B58805000FC9FE4 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
