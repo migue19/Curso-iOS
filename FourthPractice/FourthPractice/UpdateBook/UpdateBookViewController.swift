@@ -23,12 +23,10 @@ class UpdateBookViewController: UIViewController {
         idBookTxt.text = "\(book.idBook)"
         nameBookTxt.text = book.name
     }
-
     @IBAction func tapUpdateBook(_ sender: Any) {
-        updateBook()
+        updateBook(idBook: 1)
     }
-    
-    func updateBook() {
+    func updateBook(idBook: Int) {
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: Constants.dbName)
         request.returnsObjectsAsFaults = false
         do {
@@ -44,5 +42,11 @@ class UpdateBookViewController: UIViewController {
             print("Error al obtener los datos")
         }
     }
-
+    func saveContext() {
+        do {
+            try context.save()
+        } catch {
+            print("Error al guardar")
+        }
+    }
 }
